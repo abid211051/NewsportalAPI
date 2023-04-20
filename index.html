@@ -46,17 +46,19 @@
                         <select class="form-select" id="inputGroupSelect01 ">
                             <option selected>Default</option>
                             <option value="1">View</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-auto">
-                    <button type="button" class="btn btn-outline-danger">Today's Pick</button>
-                    <button type="button" class="btn btn-outline-danger">Trending</button>
+                    <button type="button" class="btn btn-outline-danger" id="trend">Today's Pick</button>
+                    <button type="button" class="btn btn-outline-info" id="today">Trending</button>
                 </div>
             </div>
-
+            <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status" id="spinner">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
             <!-- Cards -->
             <div class="container " id="card" >
 
