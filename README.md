@@ -1,7 +1,7 @@
 # NewsportalAPI
 
-<h2>Category</h2>
-URL: https://openapi.programming-hero.com/api/news/categories
+<div> <h2>Category</h2>
+URL: https://openapi.programming-hero.com/api/news/categories</div>
 
 All news from a Category                                       
 URL: https://openapi.programming-hero.com/api/news/category/${category_id}    
