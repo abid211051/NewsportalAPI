@@ -1,7 +1,23 @@
 # NewsportalAPI
 
-<h2>Category <br>URL: https://openapi.programming-hero.com/api/news/categories</h2>
-
+<h2>Categor<br>URL: https://openapi.programming-hero.com/api/news/categories</h2>
+<p style="color:red">async function fetchcategory() {
+    const url = `https://openapi.programming-hero.com/api/news/categories`;
+    const res = await fetch(url);
+    const cat = await res.json();
+    showcategory(cat.data.news_category)
+}
+// // Displaying  All Categories After Fetch
+function showcategory(category) {
+    const categorydiv = document.querySelector('#categories');
+    // console.log(categorydiv)
+    category.forEach(element => {
+        categorydiv.innerHTML += `
+    <div class="col-auto gx-5">
+        <p  class="category" onclick="fetchnews('${element.category_id}','${element.category_name}')">${element.category_name}<p/>
+    </div>`;
+    });
+}</p>
 
 <h2>All news from a Category <br>
 URL: https://openapi.programming-hero.com/api/news/category/${category_id}<br>   
