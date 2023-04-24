@@ -39,7 +39,7 @@ async function fetchnews(categoryid, category_name) {
 function shownews(newses, name) {
     spin.style.display = 'none';
     const carddiv = document.querySelector('#card');
-    document.getElementById('alert').innerHTML = `${newses.length} found for the catergory ${name}`;
+    document.getElementById('alert').innerHTML = `<h4><span class="text-primary fs-2">${newses.length}</span> Newses in the category "${name}"</h4>`;
     carddiv.innerHTML = '';
 
     // sortNewsByDefault(newses);
