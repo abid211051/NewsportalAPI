@@ -7,7 +7,7 @@
 URL: https://openapi.programming-hero.com/api/news/category/${category_id}<br>   
 Example: https://openapi.programming-hero.com/api/news/category/01</h2>
 
-<h2>News detail                                            
+<h2>News detail<br>                                           
 URL: https://openapi.programming-hero.com/api/news/${news_id}<br>         
 Example: https://openapi.programming-hero.com/api/news/0282e0e58a5c404fbd15261f11c2ab6a</h2>
 
