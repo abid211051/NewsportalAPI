@@ -1,19 +1,5 @@
-// Code for Rating system
-// const star = document.querySelectorAll('.rating i');
-// star.forEach((e, index1) => {
-//     e.addEventListener('click', () => {
-//         console.log(index1)
-//         star.forEach((element, index2) => {
-//             if (index1 >= index2) {
-//                 element.classList.add("active")
-//             }
-//             else {
-//                 element.classList.remove("active")
-//             }
-//         });
-//     })
-// })
 var spin = document.getElementById('spinner');
+// // Fetching News Categories From API
 async function fetchcategory() {
     spin.style.display = 'block';
     const url = `https://openapi.programming-hero.com/api/news/categories`;
@@ -21,7 +7,7 @@ async function fetchcategory() {
     const cat = await res.json();
     showcategory(cat.data.news_category)
 }
-
+// // Displaying  All Categories After Fetch
 function showcategory(category) {
     spin.style.display = 'none';
     const categorydiv = document.querySelector('#categories');
@@ -33,6 +19,8 @@ function showcategory(category) {
     </div>`;
     });
 }
+
+// // Fetching Newses on specific Category from API
 async function fetchnews(categoryid, category_name) {
     spin.style.display = 'block';
     const url = `https://openapi.programming-hero.com/api/news/category/${categoryid}`;
@@ -47,7 +35,7 @@ async function fetchnews(categoryid, category_name) {
         document.getElementById('alert').innerHTML = '';
     }
 }
-
+// // Displaying Newses on selected catergory
 function shownews(newses, name) {
     spin.style.display = 'none';
     const carddiv = document.querySelector('#card');
@@ -112,6 +100,8 @@ function shownews(newses, name) {
         `
     });
 }
+
+// // Fetching Single News On ID from API
 async function modalbody(id) {
     const url = `https://openapi.programming-hero.com/api/news/${id}`;
     const res = await fetch(url);
@@ -119,6 +109,7 @@ async function modalbody(id) {
     console.log(details.data)
     printinmodal(details.data[0])
 }
+// // Displaying News in a modal body
 function printinmodal(detail) {
     const modalbody = document.getElementById('modalbody');
     modalbody.innerHTML =
@@ -160,6 +151,9 @@ function printinmodal(detail) {
                     </div>
     `
 }
+
+fetchcategory(); 
+// // // Sorting and clickable rating system code(Not Added)
 // function sortNewsByView(newses) {
 //     newses.sort(function(a, b) {
 //         return b.total_view - a.total_view;
@@ -174,4 +168,18 @@ function printinmodal(detail) {
 //         return bValue - aValue;
 //     });
 // }
-fetchcategory(); 
+// Code for Rating system
+// const star = document.querySelectorAll('.rating i');
+// star.forEach((e, index1) => {
+//     e.addEventListener('click', () => {
+//         console.log(index1)
+//         star.forEach((element, index2) => {
+//             if (index1 >= index2) {
+//                 element.classList.add("active")
+//             }
+//             else {
+//                 element.classList.remove("active")
+//             }
+//         });
+//     })
+// })
