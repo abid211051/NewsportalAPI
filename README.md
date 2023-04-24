@@ -4,8 +4,7 @@ Category
 URL: https://openapi.programming-hero.com/api/news/categories
 
 All news from a Category
-URL: https://openapi.programming-hero.com/api/news/category/${category_id}
-
+URL: https://openapi.programming-hero.com/api/news/category/${category_id}    
 Example: https://openapi.programming-hero.com/api/news/category/01
 
 News detail
