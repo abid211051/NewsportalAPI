@@ -1,7 +1,6 @@
 var spin = document.getElementById('spinner');
 // // Fetching News Categories From API
 async function fetchcategory() {
-    spin.style.display = 'block';
     const url = `https://openapi.programming-hero.com/api/news/categories`;
     const res = await fetch(url);
     const cat = await res.json();
@@ -9,13 +8,12 @@ async function fetchcategory() {
 }
 // // Displaying  All Categories After Fetch
 function showcategory(category) {
-    spin.style.display = 'none';
     const categorydiv = document.querySelector('#categories');
     // console.log(categorydiv)
     category.forEach(element => {
         categorydiv.innerHTML += `
     <div class="col-auto gx-5">
-        <p onclick="fetchnews('${element.category_id}','${element.category_name}')">${element.category_name}<p/>
+        <p  class="category" onclick="fetchnews('${element.category_id}','${element.category_name}')">${element.category_name}<p/>
     </div>`;
     });
 }

@@ -64,3 +64,8 @@
 .foot{
     margin-top: 38vh;
 }
+.category:hover{
+    cursor: pointer;
+    color: rgb(0, 187, 255);
+    transition: 0.2s ease-in-out;
+}
